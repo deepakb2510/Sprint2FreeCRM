@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="21" time="343.141">
+<testcase classname="Verification of add filter to company functionality" name="To validate whether user is able to add new filters." time="19.143">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on Show filter in Companies Module..........................passed
+And user selects appropriate value for Search as <"Name"> , Operator as <"Equals"> and Equals as <"Capgemini Worldwide"> in Companies Module.passed
+And User clicks on Save Search in Companies Module..........................passed
+Then Filter should get saved and displayed in Filters Dropdown in Companies Module.passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of add filter to company functionality" name="To validate whether user is able to apply filters on companies added to view them" time="20.004">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on Show filter in Companies Module..........................passed
+And user selects appropriate value for Search as <"<search>"> , Operator as <"<operator>"> and Equals as <"<equals>"> in Companies Module.passed
+And User clicks on Search in Companies Module...............................passed
+Then Companies should get filtered appropriately............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of add filter to company functionality" name="To validate whether user is able to remove filters if required." time="20.228">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on Show filter in Companies Module..........................passed
+And user selects appropriate value for Search as <"<search>"> , Operator as <"<operator>"> and Equals as <"<equals>"> in Companies Module.passed
+And User clicks on Search in Companies Module...............................passed
+And User clicks on Clear in Companies Module................................passed
+Then Filter results should get removed in Companies Module..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of create a company functionality" name="To validate whether redirection happens to create companies form after clicking on create." time="17.66">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on create in Companies Module...............................passed
+Then Create Company form should open........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of create a company functionality" name="To validate if the user has entered details in the all mandatory fields" time="19.264">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on create in Companies Module...............................passed
+And User Fills the Company Name as <"Capgemini"> in Companies Module........passed
+And User clicks on save in Companies Module.................................passed
+Then Company data should get saved..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of create a company functionality" name="To validate whether user is able to cancel the creation of companies is required" time="14.456">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on create in Companies Module...............................passed
+And User clicks on cancel in Companies Module...............................passed
+Then Form should close and user should be redirected to the Companies Module.passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of create a company functionality" name="To validate whether user is able to unable to create company if  Mandatory details not filled." time="15.542">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on create in Companies Module...............................passed
+And User clicks on save in Companies Module.................................passed
+Then User should get error stating to enter mandatory details in Companies Module.passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of create a company functionality" name="To validate whether valid mobile number is accpeting only digits in create company" time="21.078">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on create in Companies Module...............................passed
+And User Fills the Company Name as <"Capgemini With Number"> in Companies Module.passed
+And User Enters Mobile number as <"9987326348"> in Companies Module.........passed
+And User clicks on save in Companies Module.................................passed
+Then Company data should get saved..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of delete a company functionality" name="To validate whether user is able to delete company after clicking on delete button/" time="19.914">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on Delete button in Companies Module........................passed
+And User clicks on Confirm Delete in Companies Module.......................passed
+Then Company should get deleted and user is back on Companies module........passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of delete a company functionality" name="To validate user is able to cancel the deletion process if required." time="23.747">
+<system-out><![CDATA[Given User is Logged in and is in Companies Module..........................passed
+And User clicks on Delete button in Companies Module........................passed
+And User clicks on Cancel button in Companies Module........................passed
+Then Company should not get deleted and user is back on Companies module....passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of add contact(s) functionality." name="To validate that redirection happens to the Contact creation page if the create Contact button is clicked" time="34.345">
+<system-out><![CDATA[Given User is on the Contacts page..........................................passed
+And User clicks on the Create button........................................passed
+Then User is redirected to the Create New Contact page......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of add contact(s) functionality." name="To validate whether the user has entered First Name and Last Name." time="3.224">
+<system-out><![CDATA[Given User is on the Create Contact page....................................passed
+And User enters First Name and Last Name with <"Anusmita"> and <"Sarkar">...passed
+Then Contact detail page should appear with the First Name and Last Name....passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of add contact(s) functionality." name="To validate whether the user is able to select Company from the already created Companies." time="5.289">
+<system-out><![CDATA[Given User is on the Create Contact page....................................passed
+And User selects Company....................................................passed
+Then Selected Company appears...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of add contact(s) functionality." name="To validate whether phone number has 10 digits." time="6.448">
+<system-out><![CDATA[Given User is on the Create Contact page and has entered the mandatory fields.passed
+And User enters Phone Number................................................passed
+Then Contact details are getting saved even if  valid details are not entered by the user.passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of add contact(s) functionality." name="To validate whether the Contact detail page appears after giving the mandatory fields and clicking on Save" time="6.231">
+<system-out><![CDATA[Given User is on the Create Contact page....................................passed
+And User clicks on Save.....................................................passed
+Then User is redirected to the Contact detail page..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of add contact(s) functionality." name="To validate whether the user can Cancel the creation of Contact if required." time="9.357">
+<system-out><![CDATA[Given User is on the Create Contact page....................................passed
+And User clicks on Cancel...................................................passed
+Then User is redirected to the Contacts page................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of delete Contact(s) functionality" name="To validate that the user is able to delete an existing Contact" time="20.371">
+<system-out><![CDATA[Given User is on the contacts page and wants to delete an existing contact..passed
+And User clicks on the delete button for the existing contact...............passed
+And A delete confirmation pops up...........................................passed
+And User clicks on Delete...................................................passed
+Then The required contact is deleted and user is redirected to the Contacts page.passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of delete Contact(s) functionality" name="To validate whether the user is able to Cancel the deletion process if requred" time="8.187">
+<system-out><![CDATA[Given User is on the Contact page and wants to cancel the deletion process..passed
+And User clicks on the delete button on the required contact................passed
+And A delete confirmation pops up after clicking the delete button..........passed
+And User clicks on Cancel button............................................passed
+Then User is redirected to the Contacts page and the deletion process is cancelled.passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of edit contact(s) functionality." name="To validate that the details page of the selected Contact is opened when the user clicks on the edit tasks option" time="10.516">
+<system-out><![CDATA[Given User is on the Contacts page and editing the required contact.........passed
+And User clicks on the edit button..........................................passed
+Then User is redirected to edit contact page................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of edit contact(s) functionality." name="To validate if the edited details are saved for the contact which was edited by the user" time="14.794">
+<system-out><![CDATA[Given User is on the edit contact page......................................passed
+And User enters Middle Name with <"Samanta">................................passed
+And User on the save button.................................................passed
+Then User is redirected to Contact details page and is able to see the changes made.passed
+]]></system-out>
+</testcase>
+<testcase classname="Verification of add filter to Contact functionality" name="To validate that the user can filter the contacts based on various criterias" time="32.752">
+<system-out><![CDATA[Given User is on the Contacts page and applying filters.....................passed
+And User clicks on the show filters button..................................passed
+And User selects the type for search........................................passed
+And User selects an operator for search filter..............................passed
+And User enters the value with <"Anusmita">.................................passed
+And User clicks on the filter button........................................passed
+Then User is able to view the contacts with the filters applied.............passed
+]]></system-out>
+</testcase>
+</testsuite>

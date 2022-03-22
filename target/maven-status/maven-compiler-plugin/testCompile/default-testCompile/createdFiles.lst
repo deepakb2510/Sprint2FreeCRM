@@ -1,0 +1,4 @@
+com\runner\Companies.class
+com\stepDefinition\AddContact.class
+com\runner\FreeCRMRunner.class
+com\stepDefinition\CompaniesTest.class
